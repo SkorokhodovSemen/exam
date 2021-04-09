@@ -46,7 +46,7 @@ public class Fitness {
                                     people.setGym1(false);
                                     people.setPool1(false);
                                     people.setGroup3(true);
-                                    System.out.println(people.getName() + " сейчас на групповом занятии");
+                                    System.out.println(people.getName() + " сейчас на групповом занятии. Время регистрации " + LocalTime.now());
                                     return;
                                 }
                             }
@@ -72,7 +72,7 @@ public class Fitness {
                                     people.setGym1(false);
                                     people.setPool1(false);
                                     people.setGym3(true);
-                                    System.out.println(people.getName() + " сейчас в тренажерном зале");
+                                    System.out.println(people.getName() + " сейчас в тренажерном зале. Время регистрации " + LocalTime.now());
                                     return;
                                 }
                             }
@@ -98,7 +98,7 @@ public class Fitness {
                                     people.setGym1(false);
                                     people.setPool1(false);
                                     people.setPool3(true);
-                                    System.out.println(people.getName() + " сейчас бассейне");
+                                    System.out.println(people.getName() + " сейчас бассейне. Время регистрации " + LocalTime.now());
                                     return;
                                 }
                             }
