@@ -1,5 +1,8 @@
 package exam1;
 
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+
 public class Full extends Subscription{
 //    private boolean pool1;
 //    private boolean gym1;
@@ -13,6 +16,10 @@ public class Full extends Subscription{
         pool2 = true;
         gym2 = true;
         group2 = true;
+        timeIn = LocalTime.of(8,0);
+        timeOf = LocalTime.of(22,0);
+        reg = LocalDateTime.of(2021,(int)(Math.random()*3+1),(int)(Math.random()*15),(int)(Math.random()*24),0);
+        regOff = reg.plusDays((int)(Math.random()*365)).plusHours((int)(Math.random()*24));
     }
 
 //    public void setPool1(boolean pool1) {

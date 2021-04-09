@@ -1,22 +1,44 @@
 package exam1;
 
+import java.time.LocalDateTime;
+import java.time.*;
+import java.time.format.DateTimeFormatter;
+import java.time.temporal.ChronoUnit;
+import java.time.temporal.TemporalAdjusters;
+
 abstract public class Subscription  {
 
     private String name;
     private String surName;
     private int yearBurn;
 
+    protected LocalDateTime reg;
+    protected LocalDateTime regOff;
+    protected LocalTime timeIn;
+    protected LocalTime timeOf;
     protected boolean pool1;
     protected boolean gym1;
     protected boolean group1;
     protected boolean pool2;
     protected boolean gym2;
     protected boolean group2;
+    protected boolean pool3;
+    protected boolean gym3;
+    protected boolean group3;
+
 
     public Subscription(String name, String surName, int yearBurn) {
         this.name = name;
         this.surName = surName;
         this.yearBurn = yearBurn;
+    }
+
+    public LocalTime getTimeIn() {
+        return timeIn;
+    }
+
+    public LocalTime getTimeOf() {
+        return timeOf;
     }
 
     public void setPool1(boolean pool1) {
@@ -65,6 +87,34 @@ abstract public class Subscription  {
 
     public boolean isGroup2() {
         return group2;
+    }
+
+    public LocalDateTime getRegOff() {
+        return regOff;
+    }
+
+    public boolean isPool3() {
+        return pool3;
+    }
+
+    public void setPool3(boolean pool3) {
+        this.pool3 = pool3;
+    }
+
+    public boolean isGym3() {
+        return gym3;
+    }
+
+    public void setGym3(boolean gym3) {
+        this.gym3 = gym3;
+    }
+
+    public boolean isGroup3() {
+        return group3;
+    }
+
+    public void setGroup3(boolean group3) {
+        this.group3 = group3;
     }
 
     @Override
