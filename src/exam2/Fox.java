@@ -1,7 +1,8 @@
 package exam2;
 
-public class Fox extends Options {
+import java.util.Scanner;
 
+public class Fox extends Options  {
 
     public void fox() {            //0
         if (a == 0) {

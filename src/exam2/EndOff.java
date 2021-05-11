@@ -34,7 +34,7 @@ public class EndOff extends Options {
         }
         fox.fox();
         while (a != 13) {
-            for (int i = 0; i < 13; i++) {
+            for (int i = 0; i < 17; i++) {
                 if (a == i) {
                     goToFind.goToFind();
                     goToFindOne.goToFindOne();
@@ -57,28 +57,4 @@ public class EndOff extends Options {
         }
         System.out.println("Спасибо за игру! Создатель Скороходов Семен.");
     }
-
-    public void startLoadGame(int a) {
-        while (a != 13) {
-            for (int i = 0; i < 13; i++) {
-                if (a == i) {
-                    goToFind.goToFind();
-                    goToFindOne.goToFindOne();
-                    talkWithAnimal.talkWithAnimal();
-                    talkWithWolf.talkWithWolf();
-                    talkWithOwl.talkWithOwl();
-                    goToForest.goToForest();
-                    takeHoney.takeHoney();
-                    stealHoney.stealHoney();
-                    waitBee.waitBee();
-                    eatHoney.eatHoney();
-                    giftHoney.giftHoney();
-                    goToHome.goToHome();
-                    break;
-                }
-            }
-        }
-        System.out.println("Спасибо за игру! Создатель Скороходов Семен.");
-    }
-
 }

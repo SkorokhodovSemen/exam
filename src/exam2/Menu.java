@@ -1,6 +1,8 @@
 package exam2;
 
-public class Menu extends Options{              //16
+import java.util.Scanner;
+
+public class Menu  extends Options{              //16
 
     void menu() {
         if (a == 16) {
