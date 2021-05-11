@@ -2,6 +2,7 @@ package exam2;
 
 public class GiftHoney extends Options{
 
+
     public void giftHoney() {              //11
         if (a == 11) {
             System.out.println("Довольный Медвежонок рассказал Лисёнку, что очень хорошо знает семью Белок и уверен," +
@@ -19,6 +20,7 @@ public class GiftHoney extends Options{
                 a = 12;
             }
             if (answer == 3) {
+                a =16;
                 // Команда меню
             }
         }

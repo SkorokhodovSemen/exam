@@ -2,6 +2,7 @@ package exam2;
 
 public class WaitBee extends Options{
 
+
     public void waitBee() {                //9
         if (a == 9) {
             System.out.println("Лисёнок подождал немного, и пчёлы разлетелись. " +
@@ -18,6 +19,7 @@ public class WaitBee extends Options{
                 a = 11;
             }
             if (answer == 3) {
+                a = 16;
                 // Команда меню
             }
         }

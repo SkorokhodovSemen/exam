@@ -17,6 +17,7 @@ public class TalkWithOwl extends Options{
                 a = 3;
             }
             if (answer == 3) {
+                a = 16;
                 // Команда меню
             }
         }

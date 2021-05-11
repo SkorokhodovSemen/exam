@@ -2,7 +2,6 @@ package exam2;
 
 public class GoToFind extends Options {
 
-
     public void goToFind() {
         if (a == 1) {
             System.out.println("Все лесные жители были заняты своими делами и не обращали внимания на Лисёнка и его проблему. " +
@@ -18,6 +17,7 @@ public class GoToFind extends Options {
                 a = 3;
             }
             if (answer == 3) {
+                a = 16;
                 // Команда меню
             }
         }

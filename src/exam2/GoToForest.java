@@ -17,6 +17,7 @@ public class GoToForest extends Options{
                 a = 7;
             }
             if (answer == 3) {
+                 a =16;
                 // Команда меню
             }
         }

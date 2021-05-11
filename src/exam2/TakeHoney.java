@@ -17,6 +17,7 @@ public class TakeHoney extends Options{
                 a = 8;
             }
             if (answer == 3) {
+                a = 16;
                 // Команда меню
             }
         }

@@ -19,6 +19,7 @@ public class TalkWithAnimal extends Options {
                 a = 4;
             }
             if (answer == 3) {
+                a = 16;
                 // Команда меню
             }
         }
