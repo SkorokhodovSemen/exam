@@ -3,6 +3,7 @@ package exam2;
 import java.util.Objects;
 import java.util.Scanner;
 import java.util.TreeSet;
+import java.io.*;
 
 public class Options2 {
     private int a;
@@ -101,17 +102,72 @@ public class Options2 {
     private void answerOpt(Paragraph paragraph, int answer){
         if (answer == 1) a = paragraph.getB();
         if (answer == 2) a = paragraph.getC();
+        if (answer == 3) a = 13;
+    }
+
+    private void saveGame(Integer a){
+        if (a !=0) {
+            SaveLoad saveLoad = new SaveLoad(new File(scanner.next()));
+            System.out.println(saveLoad.writeToFile(a.toString().getBytes()));
+        }
+    }
+
+    private void loadGame(){
+        String fromFile = new String(scanner.next());
+        a = Integer.parseInt(fromFile);
+        start3Game();
+    }
+
+    private void answerMenu(int answer){
+        if (answer == 1) start2Game();
+        if (answer == 2) loadGame();
+        if (answer == 3) saveGame(a);
     }
 
     public void start1Game() {
         allParagraphs();
+        a=0;
         System.out.println(menu13);
         answer = scanner.nextInt();
         if (answer == 4) return;
+        answerMenu(answer);
+    }
+
+    public void start2Game() {
+        allParagraphs();
+        a=0;
         System.out.println(paragraph0);
         answer = scanner.nextInt();
         answerOpt(paragraph0,answer);
         while (a!=12) {
+            if (a==3 || a == 8 || a == 10) return;
+            if (a == 13) {
+                System.out.println(menu13);
+                answer = scanner.nextInt();
+                answerMenu(answer);
+            }
+            if (answer == 4) return;
+            for (Paragraph paragraph : paragraphTreeSet) {
+                if (a == paragraph.getA()) {
+                    System.out.println(paragraph);
+                    answer = scanner.nextInt();
+                    answerOpt(paragraph,answer);
+                    break;
+                }
+            }
+        }
+        System.out.println(paragraph12);
+    }
+    public void start3Game() {
+        allParagraphs();
+        while (a!=12) {
+            if (a==3 || a == 8 || a == 10) return;
+            if (a == 13) {
+                System.out.println(menu13);
+                answer = scanner.nextInt();
+                answerMenu(answer);
+            }
+            if (answer == 4) return;
             for (Paragraph paragraph : paragraphTreeSet) {
                 if (a == paragraph.getA()) {
                     System.out.println(paragraph);
