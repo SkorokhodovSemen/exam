@@ -1,8 +1,10 @@
-package exam2.notthis;
+package exam2;
+
+import exam2.notthis.FileSaveLoad;
 
 import java.io.*;
 
-public class SaveLoad extends FileSaveLoad{
+public class SaveLoad extends FileSaveLoad {
 
     public SaveLoad(File file) {
         setFile(file);
@@ -29,7 +31,7 @@ public class SaveLoad extends FileSaveLoad{
     @Override
     public boolean writeToFile(byte[] data) {
         boolean result = false;
-        try (FileOutputStream outputStream = new FileOutputStream(file, true)) {     //Если true - будет дозапись в файл
+        try (FileOutputStream outputStream = new FileOutputStream(file)) {     //Если true - будет дозапись в файл
             outputStream.write(data);
             result = true;
         } catch (FileNotFoundException e) {
