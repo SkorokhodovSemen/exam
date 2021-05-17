@@ -1,4 +1,4 @@
-package exam2;
+package exam2.notthis;
 
 import java.io.File;
 import java.io.IOException;

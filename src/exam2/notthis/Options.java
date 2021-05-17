@@ -1,4 +1,4 @@
-package exam2;
+package exam2.notthis;
 
 import java.util.Scanner;
 

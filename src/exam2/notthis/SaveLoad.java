@@ -1,7 +1,6 @@
-package exam2;
+package exam2.notthis;
 
 import java.io.*;
-import java.util.Scanner;
 
 public class SaveLoad extends FileSaveLoad{
 

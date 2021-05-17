@@ -1,6 +1,4 @@
-package exam2;
-
-import java.util.Scanner;
+package exam2.notthis;
 
 public class Menu  extends Options{              //16
 

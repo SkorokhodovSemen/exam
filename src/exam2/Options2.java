@@ -1,5 +1,8 @@
 package exam2;
 
+import exam2.notthis.SaveLoad;
+
+import java.util.ArrayList;
 import java.util.Objects;
 import java.util.Scanner;
 import java.util.TreeSet;
@@ -8,23 +11,23 @@ import java.io.*;
 public class Options2 {
     private int a;
     private int answer;
-    TreeSet<Paragraph> paragraphTreeSet = new TreeSet<>();
+    ArrayList<Paragraph> paragraphArrayList = new ArrayList<>();
 
     private void allParagraphs() {
-        paragraphTreeSet.add(paragraph0);
-        paragraphTreeSet.add(paragraph1);
-        paragraphTreeSet.add(paragraph2);
-        paragraphTreeSet.add(paragraph3);
-        paragraphTreeSet.add(paragraph4);
-        paragraphTreeSet.add(paragraph5);
-        paragraphTreeSet.add(paragraph6);
-        paragraphTreeSet.add(paragraph7);
-        paragraphTreeSet.add(paragraph8);
-        paragraphTreeSet.add(paragraph9);
-        paragraphTreeSet.add(paragraph10);
-        paragraphTreeSet.add(paragraph11);
-        paragraphTreeSet.add(paragraph12);
-        paragraphTreeSet.add(menu13);
+        paragraphArrayList.add(paragraph0);
+        paragraphArrayList.add(paragraph1);
+        paragraphArrayList.add(paragraph2);
+        paragraphArrayList.add(paragraph3);
+        paragraphArrayList.add(paragraph4);
+        paragraphArrayList.add(paragraph5);
+        paragraphArrayList.add(paragraph6);
+        paragraphArrayList.add(paragraph7);
+        paragraphArrayList.add(paragraph8);
+        paragraphArrayList.add(paragraph9);
+        paragraphArrayList.add(paragraph10);
+        paragraphArrayList.add(paragraph11);
+        paragraphArrayList.add(paragraph12);
+        paragraphArrayList.add(menu13);
     }
 
 
@@ -147,7 +150,7 @@ public class Options2 {
                 answerMenu(answer);
             }
             if (answer == 4) return;
-            for (Paragraph paragraph : paragraphTreeSet) {
+            for (Paragraph paragraph : paragraphArrayList) {
                 if (a == paragraph.getA()) {
                     System.out.println(paragraph);
                     answer = scanner.nextInt();
@@ -168,7 +171,7 @@ public class Options2 {
                 answerMenu(answer);
             }
             if (answer == 4) return;
-            for (Paragraph paragraph : paragraphTreeSet) {
+            for (Paragraph paragraph : paragraphArrayList) {
                 if (a == paragraph.getA()) {
                     System.out.println(paragraph);
                     answer = scanner.nextInt();
@@ -180,16 +183,5 @@ public class Options2 {
         System.out.println(paragraph12);
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Options2)) return false;
-        Options2 options2 = (Options2) o;
-        return a == options2.a && answer == options2.answer && Objects.equals(paragraphTreeSet, options2.paragraphTreeSet) && Objects.equals(scanner, options2.scanner) && Objects.equals(paragraph0, options2.paragraph0) && Objects.equals(paragraph1, options2.paragraph1) && Objects.equals(paragraph2, options2.paragraph2) && Objects.equals(paragraph3, options2.paragraph3) && Objects.equals(paragraph4, options2.paragraph4) && Objects.equals(paragraph5, options2.paragraph5) && Objects.equals(paragraph6, options2.paragraph6) && Objects.equals(paragraph7, options2.paragraph7) && Objects.equals(paragraph8, options2.paragraph8) && Objects.equals(paragraph9, options2.paragraph9) && Objects.equals(paragraph10, options2.paragraph10) && Objects.equals(paragraph11, options2.paragraph11) && Objects.equals(paragraph12, options2.paragraph12) && Objects.equals(menu13, options2.menu13);
-    }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(a, answer, paragraphTreeSet, scanner, paragraph0, paragraph1, paragraph2, paragraph3, paragraph4, paragraph5, paragraph6, paragraph7, paragraph8, paragraph9, paragraph10, paragraph11, paragraph12, menu13);
-    }
 }

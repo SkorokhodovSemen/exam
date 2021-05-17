@@ -1,4 +1,4 @@
-package exam2;
+package exam2.notthis;
 
 public class EatHoney extends Options{
     public void eatHoney() {               //10
