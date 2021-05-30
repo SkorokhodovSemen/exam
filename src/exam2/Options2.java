@@ -9,6 +9,11 @@ public class Options2 {
     private int s;
     private int answer;
     SaveLoad saveLoad = new SaveLoad(new File("default.txt"));
+    SaveGame saveGame1 = new SaveGame(saveLoad);
+    LoadGame loadGame1 = new LoadGame(saveLoad);
+    Menu menu = new Menu(saveGame1,loadGame1);
+
+//    SaveLoad saveLoad = new SaveLoad(new File("default.txt"));
     ArrayList<Paragraph> paragraphArrayList = new ArrayList<>();
 
     private void allParagraphs() {
@@ -108,12 +113,14 @@ public class Options2 {
 
     private void saveGame(Integer b) {
         if (b != 0) {
+            menu.saveGame();                        // ТАК?
             System.out.println(saveLoad.writeToFile(b.toString().getBytes()));
             a=17;
         }
     }
 
     private void loadGame() {
+        menu.loadGame();                            // ТАК?
         SaveLoad saveLoad = new SaveLoad(new File("default.txt"));
         String fromFile = new String(saveLoad.readFromFile());
         a = Integer.parseInt(fromFile);
